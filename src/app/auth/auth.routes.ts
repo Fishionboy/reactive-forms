@@ -12,7 +12,9 @@ export const authRoutes: Routes =[
             {
                 path:'**',
                 redirectTo:'sign-up'
-            }
-        ]
-    }
-]
+            },
+        ],
+    },
+];
+
+export default authRoutes;
