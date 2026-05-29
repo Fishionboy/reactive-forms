@@ -9,9 +9,9 @@ export class FormUtils {
                     return 'Este campo es requerido';
                 case 'minlength':
                     return `Mínimo de ${errors['minlength'].requiredLength}`;
-                case 'min':
-                    return `Valor mínimo de ${errors['min'].min}`;
-            }
+                    case 'email':
+                        return `No es un correo válido`;
+                }
         }
         return null;
     }
