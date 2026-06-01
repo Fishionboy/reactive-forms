@@ -16,6 +16,8 @@
                     @if (formUtils.isValidField(myForm,"name")) {
                     <span class="form-text text-danger">
                         Debe de ser en formato de nombre y apellido
+
+                        
                     </span>
 
                     }
@@ -32,6 +34,7 @@
                     @if (formUtils.isValidField(myForm,"email")) {
                     <span class="form-text text-danger">
                         {{formUtils.getFieldError(myForm,"email")}}
+                        
                     </span>
                     }
                 </div>
@@ -47,7 +50,7 @@
 
                     @if (formUtils.isValidField(myForm,"username")) {
                     <span class="form-text text-danger">
-                        El username no puede ser Strider
+                        {{formUtils.getFieldError(myForm,'username')}}
                     </span>
                     }
                 </div>
@@ -78,9 +81,9 @@
                         placeholder="Confirmar la contraseña"
                         formControlName="confirmPassword">
 
-                    @if (formUtils.isValidField(myForm,"confirmPassword")) {
+                    @if (myForm.errors && myForm.touched) {
                     <span class="form-text text-danger">
-                        {{formUtils.getFieldError(myForm,"password")}}
+                       Las contraseñas no son iguales
                     </span>
                     }
 

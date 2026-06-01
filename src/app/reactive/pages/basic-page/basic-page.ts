@@ -32,7 +32,7 @@ export class BasicPage {
     if(this.myForm.invalid){
       this.myForm.markAllAsTouched();
     }
-    console.log(this.myForm);
+   
     this.myForm.reset({
       price:0,
       inStorage:0
